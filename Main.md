@@ -100,8 +100,6 @@ Wenn es fertig wird,
 
 Sie haben jetz geschaft die AD DS moudl zu instaliren, Es fehlt noch der Modul zu konfiguriert
 
-
-
 ## Configuration
 Es ist notig fur das Funkzionalitat der Active Directory zu konfiguriert, Ohne eine richtigen konfiguration wird der AD DS Nicht fukzioniren.
 
@@ -112,6 +110,79 @@ Nahc der Installation wird Die flagge in das obbere Rehcte ecke mit eine warn sy
 
 Sie werden sehen das es eine "Post deplomyent Configuration" Gibts
 ![alt text](image-22.png)
+
+2. Drucken Sie auf "Promote the Server to Domain Controler"
+![alt text](image-23.png)
+
+Du wirds dieser menu bekommen, wie der Installtions menu das ist anlich und wrids gelich ablaufen.
+![alt text](image-24.png)
+
+
+3. Drucke auf Add new forest
+
+Was ist eine Forest?
+/////////////////
+
+gebe Deine Domain eine Domain name. Das wird spatter von der DNS verwalten.
+Der AD Modul benotigt eine FQDN, und wrid keine einfache name in der domain name.
+Du must eine TLD haben, ohne eine TLD wird der Server der name Ncith akzeptiren. 
+
+4. Schreibe deine Domain Name rein
+![alt text](image-25.png)
+
+wenn sie verscheiden servern und forst haben auf eine server es kann dazu fuhren das die auf verschidene Infrascrucutre funkzioneiren. Deswegen ist es jetz nicht so wichtig in unsere fall aber sie nacher auf eine andere infracscurete eine Forest erstellen wollen. Mussen sie enschprechend wissen weche aus zuwahlen
+
+5. Wahle die Windwos Server 2025
+![alt text](image-26.png)
+
+Welche funkzionen soll diesr dns server haben. Du hast die auswahl das zu bestimmen.
+
+6. Wahle DNS
+![alt text](image-27.png)
+
+Dieses password musen sie merken wegen es wird wichtig spatter, wenn wir die clients einloggen und mir Der AD verbinden.
+
+7. Schreibe eine Passoword rein, Und Drucke Weiter
+
+![alt text](image-28.png)
+
+Wir Brauchen keine DNS delegation zone, Wegen das wird eine simplen AD + DNS Setup.
+
+8. Drucke Weiter
+
+![alt text](image-29.png)
+
+Das Netbios ist das name was die Cleint Gareten werden sehen wenn die mit der AD verbunden sind, das ist die name von der server das wird zu das end user sehebar
+
+9. Schribe die Name rein, Durkce weiter
+
+![alt text](image-30.png)
+
+Hier kannst du die Phaden zu das data an der server andren. Das ist wichtig wenn du willst das die data auf eine andre disk oder dirve geschpeichertwerden soll. Wir nutzen die Default wengen wir haben nur eine dirive.
+
+10. Drucke weiter
+
+![alt text](image-31.png)
+
+![alt text](image-32.png)
+
+![alt text](image-33.png)
+
+![alt text](image-34.png)
+
+![alt text](image-35.png)
+
+![alt text](image-36.png)
+
+![alt text](image-37.png)
+
+
+
+
+5. 
+
+6. 
+
 
 
 
