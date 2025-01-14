@@ -214,9 +214,21 @@ Folder, an der AD konenn wir foldern erstellen wo wir data und Inforamtionenn re
 
 ----
 
-Von der Server Management
+1. Von der Server Maneger In der Obberen Ecke Drucke auf "Active Directoy User and Servicecs"
+![alt text](image-38.png)
+![alt text](image-39.png)
 
+an der linken seite befindent sich die active domains in diene Network
+![alt text](image-40.png)
 
+Heir ist das Domain kemal.com die wir vorher gemacht haben.
+
+2. Drucke auf Der Main Domain
+![alt text](image-41.png)
+
+Heir befinden sich die utnere Direcotrs fur das AD. Heir findete man 
+
+3. 
 
 ## Cleitn Tests
 
