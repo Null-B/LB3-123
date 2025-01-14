@@ -164,41 +164,65 @@ Hier kannst du die Phaden zu das data an der server andren. Das ist wichtig wenn
 
 ![alt text](image-31.png)
 
+
+Heir gibts eine revwei, sher epholen die settings an zu schauen bevor du weiter gehst. Nutze meine Screenshots als eine Template.
+
 ![alt text](image-32.png)
 
 ![alt text](image-33.png)
 
+11. Drucke weiter
+
+Lass Windows server 2025 Die Settigns einstellen und die ubernehmen. Es wird auch shaeun das der Server hat die benotigte resurcen und Modulen dieser weiter zu mahcen.
+
+Es ist nicht eine grosses problem wenn eineige warnunge heir auftacuhen, wir benotigen weinger modulen als die normal auf eine serve sich befinden
+
 ![alt text](image-34.png)
 
-![alt text](image-35.png)
+Heir in unsere fall tauchen zb einige Probleme mit der Netwrok adapter wengen das eine VM ist. WIr konnen die Ignoriren fur der ziet wegen es wird nicht viel andere sein als waren wir auf einer echten server.
+
+12. Drucke auf Install
 
 ![alt text](image-36.png)
 
 ![alt text](image-37.png)
 
+Nahc diser Opertaiton wrid der Server selber Neustarten. 
+
+Mit Der erste tiel der instalation von Das Active Directoy sind wir feritg. Wir werden mit der Grupen und Unsern Nacher weiter machen. Aber bvor das bentoige wir einige Modulen.
+
+# DNS
+Siro is doing this
+
+# DCHP
+Noting here
 
 
 
-5. 
 
-6. 
+# Groups and Users AD
+
+Wir haben die DNS Und Das DCP konfiguriert, jetz so das unsere AD Mit Unser Gefuhlt werden kann schauen wir uns an wie mann Unser und Organistaion Units machet in AD.
+
+*Grund Begreife* 
+
+Organistoan Untis sind wie abtielungen, die sind da um usern Directorys und sontstiges zu behalten. Mann kann meherere usern und Directorys uber eine organistational unti verwalten. 
+
+Usern an der AD, Usern sind die Besntand teil der AD wir konenn die nutzetn um leute in der AD zu verbinden und zusamnen zu bringen. Die konnen eine veilatligkeit an Moglichkeiten zur verwaltung haben wie: Cloud Hoems, Cloud Storange, VMs um ins netz zu arbeiten und auch configuraitosn so das auf jeder comptuer konenn die gelich und einfahc arbeitenn.
+
+Folder, an der AD konenn wir foldern erstellen wo wir data und Inforamtionenn reinmachen konnen, die nutuzen uns wie File Shares aber afu eine bessere nuvea
+
+----
+
+Von der Server Management
 
 
-
-
-## Groups and Users
 
 ## Cleitn Tests
 
 ## Conectivity
 
 
-# DNS
-Siro is doing this
 
-
-
-# DCHP
-Noting here
 
 # Printing Server
