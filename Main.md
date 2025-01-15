@@ -200,7 +200,9 @@ Noting here
 
 
 
-# Groups and Users AD
+## Groups and Users AD
+
+### Infos / Theorie
 
 Wir haben die DNS Und Das DCP konfiguriert, jetz so das unsere AD Mit Unser Gefuhlt werden kann schauen wir uns an wie mann Unser und Organistaion Units machet in AD.
 
@@ -214,6 +216,8 @@ Folder, an der AD konenn wir foldern erstellen wo wir data und Inforamtionenn re
 
 ----
 
+### Organistaion Units
+
 1. Von der Server Maneger In der Obberen Ecke Drucke auf "Active Directoy User and Servicecs"
 ![alt text](image-38.png)
 ![alt text](image-39.png)
@@ -226,9 +230,72 @@ Heir ist das Domain kemal.com die wir vorher gemacht haben.
 2. Drucke auf Der Main Domain
 ![alt text](image-41.png)
 
-Heir befinden sich die utnere Direcotrs fur das AD. Heir findete man 
+Heir befinden sich die utnere Direcotrs fur das AD. Heir findete man Alle Directos in eine spezifische Domain. Du kannst alle anderungne was auf netz geht.
 
-3. 
+3. Rechte Maus taste drucke auf das Domain
+![alt text](image-42.png)
+
+4. Drucke auf new
+5. Wahle Organistaon Unti 
+![alt text](image-43.png)
+![alt text](image-44.png)
+
+Heir kannst du selber auswahlen was fur eine Namesn kozept deinser organistoan Untis. Es kann sein das sie wollen fur jede Ablteilung eine Organsitoan Unit machen. Order ware das auf eine sub domain. dass kommt auf der Planung drauf.
+
+6. Schreibe die name von deinser Unti. Und Drucke auf Ok
+![alt text](image-45.png)
+
+Jetz ist eine Organistton unti kreiert. 
+![alt text](image-46.png)
+Was eine sher colle moglichkeit ist das wir unter diesr unti noch einige organisaotl untis machen konnen
+
+Zb in meiner situation wo wir einige abteilungen haben werde ich die abteilungne in verschidenen organistoaon untis uterteilen so das die seperat von ein andere fukzioniren konenn.
+
+
+![alt text](image-47.png)
+
+Wenn wir die Organsination untis gemahct haben, gehen wir fort mit der user kreation. Users sind Gleich wie die Local users auf PC aber in disenm fall wird das auf das server geshpeichert. Die sind auf das server geschpecihet und es gibt uns sehr viele verwalungs methoden
+
+### Normale User
+
+um users zu kreiren
+
+1. Wir drucken auf eine organisotan Unti mit der Rechte Maus taste
+![alt text](image-48.png)
+2. Unter new, Users
+3. Schreibe die notige Information zu den user
+![alt text](image-49.png)
+![alt text](image-50.png)
+Wenn die inforamtion drin sind Drucke "Next"
+
+4. Gebe die User eine password
+Gebe die user eine Starke und sicherre Passorwd. 
+5. Unselektire "User muss change password on login"
+Diser schritt ist epholen, Wegen wir werden keine echten users drauf hauben und mehrre passswords zu tracken ist schwerig wegen es wird kompelzitat in der prozess reinbringne.
+So besser eine password die wir setzen so das wir es merken
+6. Kurze reveiw, Wenn alles stimmt drucke weiter
+![alt text](image-51.png)
+
+
+heir ist unsere kreitere user:
+![alt text](image-52.png)
+Mit dem werden wir spatteer in das cleint system einloggen und dadurhc auf das ad zu grieffen
+
+### Admin User
+Wir brauhen eine addmin user so im fall wenn wir wollen ins AD zugfrien und administiren wollen so das wir es Remote machen konnen. Ohne das wir in der server reinloggen zu mussen
+
+1. Mache alle schrite aus der Normale User
+2. Rechte maustaste auf das user
+3. Drucke auf Propertiest
+![alt text](image-54.png)
+4. Drucke auf Member of
+![alt text](image-55.png)
+![alt text](image-56.png)
+Heir sind
+5. 
+
+
+
 
 ## Cleitn Tests
 
