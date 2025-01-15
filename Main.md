@@ -275,54 +275,76 @@ Nach dem Erstellen der OUs können wir Benutzer hinzufügen. Benutzer in AD sind
 
 Der nächste Schritt ist die Erstellung von Benutzern, um die Domäne weiter zu organisieren und zu verwalten.
 
-### Normale User
+### Normale User erstellen
 
-um users zu kreiren
+Um Benutzer zu erstellen, führen Sie die folgenden Schritte aus:
 
-1. Wir drucken auf eine organisotan Unti mit der Rechte Maus taste
-![alt text](image-48.png)
-2. Unter new, Users
-3. Schreibe die notige Information zu den user
-![alt text](image-49.png)
-![alt text](image-50.png)
-Wenn die inforamtion drin sind Drucke "Next"
+1. **Klicken Sie mit der rechten Maustaste auf eine Organizational Unit (OU)**.
+   - Wählen Sie **"New"** > **"User"**.
+   ![OU Rechtsklick](image-48.png)
 
-4. Gebe die User eine password
-Gebe die user eine Starke und sicherre Passorwd. 
-5. Unselektire "User muss change password on login"
-Diser schritt ist epholen, Wegen wir werden keine echten users drauf hauben und mehrre passswords zu tracken ist schwerig wegen es wird kompelzitat in der prozess reinbringne.
-So besser eine password die wir setzen so das wir es merken
-6. Kurze reveiw, Wenn alles stimmt drucke weiter
-![alt text](image-51.png)
+2. **Geben Sie die notwendigen Informationen für den Benutzer ein**:
+   - Vorname, Nachname und Benutzeranmeldename (z. B. "john.doe").
+   ![Benutzerinformationen eingeben](image-49.png)  
+   ![Benutzeranmeldename festlegen](image-50.png)
 
+   - Nach Eingabe der Informationen klicken Sie auf **"Next"**.
 
-heir ist unsere kreitere user:
-![alt text](image-52.png)
-Mit dem werden wir spatteer in das cleint system einloggen und dadurhc auf das ad zu grieffen
+3. **Passwort für den Benutzer festlegen**:
+   - Erstellen Sie ein starkes und sicheres Passwort.
+   - **Empfehlung:** Deaktivieren Sie die Option **"User must change password at next logon"**, da wir in dieser Testumgebung keine echten Benutzer verwenden und die Nachverfolgung mehrerer Passwörter unnötig kompliziert wäre.
 
-### Admin User
-Wir brauhen eine addmin user so im fall wenn wir wollen ins AD zugfrien und administiren wollen so das wir es Remote machen konnen. Ohne das wir in der server reinloggen zu mussen
+4. **Überprüfen Sie die Einstellungen**:
+   - Wenn alle Informationen korrekt sind, klicken Sie auf **"Finish"**.
+   ![Benutzer überprüfen](image-51.png)
 
-1. Mache alle schrite aus der Normale User
-2. Rechte maustaste auf das user
-3. Drucke auf Propertiest
-![alt text](image-54.png)
-4. Drucke auf Member of
-![alt text](image-55.png)
-![alt text](image-56.png)
+5. **Fertiggestellter Benutzer**:
+   - Der erstellte Benutzer wird in der Liste der OU angezeigt.
+   ![Fertiger Benutzer](image-52.png)
 
-Heir sind Die Gruppen die an der user angehegt sind.
-Wir werden diser user die gruppe "Domain Admin" geben. mit dieser Group werden wir nacher die computer an usenre netz verdingen. Ohne diser perminsions konnen wir erweiterte rescorscens zugreiffen.
+   Mit diesem Benutzer können wir später auf einem Client-System auf die Active Directory-Domäne zugreifen.
 
-5. Drucke auf add
-![alt text](image-58.png)
-6. Schreibe "Adminstrators" rein und drucke Enter
-![alt text](image-59.png)
-7. Schreibe "Domain Admin" rein und drucke Enter
-![alt text](image-60.png)
-8. Drucke auf ok und schliessen die menu
+---
 
-Ab jetz sind wir fertig mit der konfiguriren auf der server. Um Cleitns in der netz zu verbinden mussen wir einige einstellungen auf das cleinside machen so das es funkzioneiren wird.
+### Admin User erstellen
+
+Ein Admin-Benutzer ist erforderlich, um das Active Directory remote zu verwalten und administrative Aufgaben auszuführen, ohne sich direkt am Server anmelden zu müssen.
+
+1. **Erstellen Sie einen neuen Benutzer**:
+   - Folgen Sie den gleichen Schritten wie bei der Erstellung eines normalen Benutzers.
+
+2. **Fügen Sie den Benutzer der Administratorengruppe hinzu**:
+   - Klicken Sie mit der rechten Maustaste auf den Benutzer und wählen Sie **"Properties"**.
+   ![Benutzereigenschaften öffnen](image-54.png)
+
+3. **Navigieren Sie zum Tab "Member of"**:
+   - Dieser Tab zeigt die Gruppen an, denen der Benutzer angehört.
+   ![Mitgliedschaften anzeigen](image-55.png)  
+   ![Gruppenmitgliedschaften](image-56.png)
+
+4. **Fügen Sie den Benutzer der Gruppe "Domain Admins" hinzu**:
+   - Klicken Sie auf **"Add"**.
+   - Geben Sie **"Administrators"** ein und drücken Sie **Enter**.
+   ![Administratorengruppe hinzufügen](image-58.png)
+
+   - Wiederholen Sie den Vorgang und geben Sie **"Domain Admins"** ein. Drücken Sie anschließend **Enter**.
+   ![Domain Admin hinzufügen](image-59.png)
+
+5. **Einstellungen speichern**:
+   - Klicken Sie auf **"OK"**, um die Änderungen zu speichern, und schließen Sie das Menü.
+   ![Einstellungen speichern](image-60.png)
+
+---
+
+### Abschluss
+
+Die Konfiguration auf dem Server ist nun abgeschlossen. Mit dem Admin-Benutzer können Sie jetzt die Active Directory-Umgebung remote verwalten. 
+
+---
+
+### Nächste Schritte
+
+Um Clients mit dem Netzwerk zu verbinden, müssen einige Einstellungen auf den Client-Systemen vorgenommen werden. Diese Schritte werden im nächsten Abschnitt erklärt.
 
 ## Cleitn Tests
 
