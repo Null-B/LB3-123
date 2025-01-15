@@ -1,104 +1,111 @@
 # Static IP and Time zone
 Noting Here bc its a place holder
 
-## Host Name anderen
-Wir mussen unsere Host name andere so das wir in der zufkunf unsere server einfach erkkerne konnen. Das ist auch wichtig wenn wir nacher eine domain erstellen was wird von der Host name ubernommen.
+## Hostname ändern
+Wir müssen unseren Hostnamen ändern, damit wir in Zukunft unsere Server einfacher identifizieren können. Das ist auch wichtig, wenn wir später eine Domain erstellen, da diese oft vom Hostnamen übernommen wird.
 
-### Process
-1. Auf das linke seite drucken auf das "Local Server"
-![alt text](image.png)
+### Prozess
+1. Auf der linken Seite auf "Local Server" klicken.  
+   ![alt text](image.png)
 
-Dann in der server properties seihst du die "Computer Name"
-2. Drucke auf das "Computer Name"
-![alt text](image-1.png)
-![alt text](image-2.png)
+   In den Servereigenschaften siehst du den aktuellen "Computer Name".
 
-3. Drucke auf "change"
-![alt text](image-3.png)
+2. Klicke auf "Computer Name".  
+   ![alt text](image-1.png)  
+   ![alt text](image-2.png)
 
-Und heir wirds du Eien eigene name wahlen fur deine Server, es ist epholen eine name nach der Firma Names konzept zu gehen, aber das ist nicht zwangshaft
-![alt text](image-4.png)
-4. Gebe das Name euren server ein
-5. Drucke Auf "OK"
-![alt text](image-5.png)
-Um die andereungne zu ubernehmen muss du deine gerat neu starten
-6. Drucke auf Ok
-![alt text](image-6.png)
+3. Klicke auf "Change".  
+   ![alt text](image-3.png)
 
-Du werdest auch nochmal informiert das du musst deine pc neu starten
-![alt text](image-7.png)
+   Hier kannst du einen neuen Namen für deinen Server wählen. Es wird empfohlen, einen Namen nach dem Namenskonzept deiner Firma zu wählen, aber das ist nicht zwingend erforderlich.  
+   ![alt text](image-4.png)
 
-7. Wahle "restrart now"
-![alt text](image-8.png)
+4. Gib den neuen Namen deines Servers ein.
 
-Warte Bis deine Server Neu Startet
+5. Klicke auf "OK".  
+   ![alt text](image-5.png)
 
-### Teste
-Um zu sehen ob unsere Server Mit der Neue Name konfiguriert ist mussn wir es in der local server properties Uberprufen.
+   Um die Änderungen zu übernehmen, musst du dein Gerät neu starten.
 
-Wenn der server hochgeafhren ist
-8. Offnen sie Server Manager.
-9. Gehen sie auf Local Server
-![alt text](image.png)
+6. Klicke auf "OK".  
+   ![alt text](image-6.png)
 
-Und unter "Properties" Wrist du sehehn das der server mit der neuen name konfiguriert ist.
-![alt text](image-9.png)
+   Du wirst erneut informiert, dass du deinen PC neu starten musst.  
+   ![alt text](image-7.png)
 
-wenn das nicht der fall ist, machen sie die schritte nochmal
+7. Wähle "Restart now".  
+   ![alt text](image-8.png)
+
+   Warte, bis dein Server neu gestartet ist.
+
+### Testen
+Um zu überprüfen, ob der neue Name korrekt konfiguriert wurde, müssen wir die Einstellungen in den lokalen Servereigenschaften überprüfen.
+
+8. Öffne den Server Manager.  
+9. Gehe zu "Local Server".  
+   ![alt text](image.png)
+
+   Unter "Properties" wirst du sehen, dass der Server mit dem neuen Namen konfiguriert wurde.  
+   ![alt text](image-9.png)
+
+Wenn das nicht der Fall ist, wiederhole die Schritte.
 
 # AD DS
 Active Directory (AD) ist eine weit verbreitete Windows-Software, die Administratoren ermöglicht, ein gesamtes Netzwerk zentral zu verwalten. Mit Active Directory gehören die Zeiten der Vergangenheit an, in denen jedes einzelne Gerät wie PCs, Laptops und mobile Geräte manuell konfiguriert werden musste.
+
 AD bietet eine zentrale Plattform zur Verwaltung von Benutzern, Geräten, Gruppenrichtlinien, Sicherheitsrichtlinien und Zugriffsrechten. Dadurch wird die Verwaltung großer Netzwerke effizienter, sicherer und konsistenter.
 
 ## Installation
-1. Starte eure VM, und logge euch ein
-2. Offnen Serve Manager
 
-3. Auf Der Dashboard druchke auf add roles and Feautres (Das Nummmer 2)
-![alt text](image-10.png) 
+1. Starten Sie Ihre VM und melden Sie sich an.
+2. Öffnen Sie den Server Manager.
 
-4. Lessen sie die einleitung durhc, und drucken sie OK
-![alt text](image-11.png)
+3. Klicken Sie im Dashboard auf **"Add Roles and Features"** (Schritt 2).
+   ![Add Roles and Features](image-10.png)
 
-5. Wahle Role Based Installation und Drucke OK
-![alt text](image-12.png)
+4. Lesen Sie die Einführung und klicken Sie auf **"OK"**.
+   ![Einleitung](image-11.png)
 
-6. Wahle Deine Server, Pass Gut auf das es Deine Server ist.
-![alt text](image-13.png)
-Sie konen heir auch die IP uberprufen und das computer name, wenn diese paratmetre nicht stimmen ich ephele das sie es heir abrechen und die parameter anderen
+5. Wählen Sie **"Role-based or feature-based installation"** und klicken Sie auf **"Next"**.
+   ![Role-based Installation](image-12.png)
 
-7. Finde "Active Directory Domain Serveces" In das Liste
-![alt text](image-14.png)
+6. Wählen Sie Ihren Server aus. Achten Sie darauf, dass der richtige Server ausgewählt ist.
+   ![Server auswählen](image-13.png)  
+   Sie können hier auch die IP-Adresse und den Computernamen überprüfen. Wenn diese Parameter nicht übereinstimmen, brechen Sie den Vorgang ab und passen Sie die Einstellungen an.
 
-8. Selectire die Modul
-9. Drucke auf Add Feautres
-![alt text](image-15.png)
+7. Suchen Sie **"Active Directory Domain Services"** in der Liste.
+   ![ADDS finden](image-14.png)
 
-Uberpruffe das es Selektirert ist
-![alt text](image-16.png) 
+8. Markieren Sie das Modul.
+9. Klicken Sie auf **"Add Features"**.
+   ![Features hinzufügen](image-15.png)
 
-10. Drucke auf next
-11. Schau das "Group Polices Management" ausgewahlt ist
-![alt text](image-17.png)
-Wenn das nicht der fall wahre, selektiren sie es maneuel
-12. Drucke auf next
+10. Überprüfen Sie, ob das Modul ausgewählt ist.
+    ![Auswahl überprüfen](image-16.png)
 
-Der serve wird dir informacion ubder das AD geben, wenn sie wollen Lessen sie es druch.
+11. Klicken Sie auf **"Next"**.
+12. Stellen Sie sicher, dass **"Group Policy Management"** ausgewählt ist.
+    ![Group Policy Management](image-17.png)  
+    Falls dies nicht der Fall ist, wählen Sie es manuell aus.
 
-13. Drucke auf next
+13. Klicken Sie auf **"Next"**.
 
-Heir wirds du eine uberblick von die modulen bekommen die instaliert werden. Bitte sahuen sie an, nutze deiser photo als eine beispliel
-![alt text](image-18.png)
-14. Drucke auf Install
+Der Server zeigt Ihnen Informationen über AD an. Lesen Sie diese bei Bedarf durch.
 
-Lassen sie der Installation Laufen bis es Fertig ist
-![alt text](image-19.png)
+14. Klicken Sie auf **"Next"**.
 
-Wenn es fertig wird,
-![alt text](image-20.png)
-15. Drucken sie auf "Close"
+An dieser Stelle sehen Sie eine Übersicht der zu installierenden Module. Überprüfen Sie diese anhand der folgenden Abbildung:
+   ![Übersicht der Module](image-18.png)
 
-Sie haben jetz geschaft die AD DS moudl zu instaliren, Es fehlt noch der Modul zu konfiguriert
+15. Klicken Sie auf **"Install"**.
+
+Warten Sie, bis die Installation abgeschlossen ist.
+   ![Installation läuft](image-19.png)
+
+16. Sobald die Installation fertig ist, klicken Sie auf **"Close"**.
+   ![Installation abgeschlossen](image-20.png)
+
+Sie haben nun das AD DS-Modul erfolgreich installiert. Als nächstes muss das Modul konfiguriert werden.
 
 ## Configuration
 Es ist notig fur das Funkzionalitat der Active Directory zu konfiguriert, Ohne eine richtigen konfiguration wird der AD DS Nicht fukzioniren.
@@ -246,11 +253,12 @@ Heir kannst du selber auswahlen was fur eine Namesn kozept deinser organistoan U
 ![alt text](image-45.png)
 
 Jetz ist eine Organistton unti kreiert. 
+
 ![alt text](image-46.png)
+
 Was eine sher colle moglichkeit ist das wir unter diesr unti noch einige organisaotl untis machen konnen
 
 Zb in meiner situation wo wir einige abteilungen haben werde ich die abteilungne in verschidenen organistoaon untis uterteilen so das die seperat von ein andere fukzioniren konenn.
-
 
 ![alt text](image-47.png)
 
@@ -296,9 +304,11 @@ Heir sind Die Gruppen die an der user angehegt sind.
 Wir werden diser user die gruppe "Domain Admin" geben. mit dieser Group werden wir nacher die computer an usenre netz verdingen. Ohne diser perminsions konnen wir erweiterte rescorscens zugreiffen.
 
 5. Drucke auf add
-
+![alt text](image-58.png)
 6. Schreibe "Adminstrators" rein und drucke Enter
+![alt text](image-59.png)
 7. Schreibe "Domain Admin" rein und drucke Enter
+![alt text](image-60.png)
 8. Drucke auf ok und schliessen die menu
 
 Ab jetz sind wir fertig mit der konfiguriren auf der server. Um Cleitns in der netz zu verbinden mussen wir einige einstellungen auf das cleinside machen so das es funkzioneiren wird.
@@ -316,6 +326,7 @@ Wir mussen auf die Vms 3 sachen machen:
 In der Network manager der VM, mussen sie sicher stellen das es in der gelichen Netzwerk ist wie das Server. Wenn das nicht der fall ware gehen sie zu der VM Network konfiguration in diser dokumet. Da wirds ausfuhrlich beschreiben wie mann das macht.
 
 1. Starte die Cleint VM
+
 2. Logge dich rein mit der Local User
 3. Ofnnen sie der File Explorer
 4. Gehe auf This PC
@@ -349,7 +360,7 @@ Unter device specifactions, schauen sie der Full device name an.
 wenn es mit der Domain Endet das bedutet das wir geschaft haben die Cleitns ins netz zu brigen.
 
 
-## Conectivity
+## Checks
 
 
 
