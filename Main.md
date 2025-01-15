@@ -291,13 +291,63 @@ Wir brauhen eine addmin user so im fall wenn wir wollen ins AD zugfrien und admi
 4. Drucke auf Member of
 ![alt text](image-55.png)
 ![alt text](image-56.png)
-Heir sind
-5. 
 
+Heir sind Die Gruppen die an der user angehegt sind.
+Wir werden diser user die gruppe "Domain Admin" geben. mit dieser Group werden wir nacher die computer an usenre netz verdingen. Ohne diser perminsions konnen wir erweiterte rescorscens zugreiffen.
 
+5. Drucke auf add
 
+6. Schreibe "Adminstrators" rein und drucke Enter
+7. Schreibe "Domain Admin" rein und drucke Enter
+8. Drucke auf ok und schliessen die menu
+
+Ab jetz sind wir fertig mit der konfiguriren auf der server. Um Cleitns in der netz zu verbinden mussen wir einige einstellungen auf das cleinside machen so das es funkzioneiren wird.
 
 ## Cleitn Tests
+
+Wir Brauchen Eine zusatliche VM, Das sollte entweder Windows 10 oder windwos 11 sein.
+
+Wir mussen auf die Vms 3 sachen machen:
+* PC name anderen
+* Domain hinzufugen
+* Testen
+
+**wichtig**
+In der Network manager der VM, mussen sie sicher stellen das es in der gelichen Netzwerk ist wie das Server. Wenn das nicht der fall ware gehen sie zu der VM Network konfiguration in diser dokumet. Da wirds ausfuhrlich beschreiben wie mann das macht.
+
+1. Starte die Cleint VM
+2. Logge dich rein mit der Local User
+3. Ofnnen sie der File Explorer
+4. Gehe auf This PC
+5. Drucke in das Feld mit der Rechten Maus taste
+6. Gehe auf Properties
+7. Drucke auf das "Rename this PC"
+8. Schreiben sie der Name des PC die wir nacher in das AD sehen werden
+
+unter dieser menu stehet "member of" Da hats 2 optioen:
+* Domain
+* Workgroup
+
+9. Wahle die Domain (Deisem fall"kemal.com")
+10. Neu starten
+
+Nach der Neu start
+11. Wahlen sie unten rehcts "Other User"
+
+Uberprufen sie das es eine weise text unter der passowrd feld gibt was steht "Sign in to: Kemal"
+
+wenn es so stheret bedutet das wir werden mit der Domain eingelogt und Ncith mit der Local user.
+
+12. Geben sie die Username von einer die user die wir fruhner kreiert haben.
+
+13. Ofnnen sie der File Explorer
+14. Gehe auf This PC
+15. Drucke in das Feld mit der Rechten Maus taste
+16. Gehe auf Properties
+
+Unter device specifactions, schauen sie der Full device name an.
+wenn es mit der Domain Endet das bedutet das wir geschaft haben die Cleitns ins netz zu brigen.
+
 
 ## Conectivity
 
