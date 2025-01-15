@@ -108,95 +108,85 @@ Warten Sie, bis die Installation abgeschlossen ist.
 Sie haben nun das AD DS-Modul erfolgreich installiert. Als nächstes muss das Modul konfiguriert werden.
 
 ## Configuration
-Es ist notig fur das Funkzionalitat der Active Directory zu konfiguriert, Ohne eine richtigen konfiguration wird der AD DS Nicht fukzioniren.
 
-Nahc der Installation wird Die flagge in das obbere Rehcte ecke mit eine warn sybole sein, das ist sozusagen eine signal das etwas muss getan werden um die Installation feritg zu stellen.
+Es ist notwendig, Active Directory (AD) korrekt zu konfigurieren, da der AD DS-Dienst ohne eine ordnungsgemäße Konfiguration nicht funktionieren wird.
 
-1. Drucken sie auf das flagge
-![alt text](image-21.png)
+Nach der Installation erscheint ein Warnsymbol in der oberen rechten Ecke des Server Managers. Dieses Signal weist darauf hin, dass weitere Schritte erforderlich sind, um die Installation abzuschließen.
 
-Sie werden sehen das es eine "Post deplomyent Configuration" Gibts
-![alt text](image-22.png)
+1. **Klicken Sie auf das Warnsymbol (Flagge)**.
+   ![Flagge](image-21.png)
 
-2. Drucken Sie auf "Promote the Server to Domain Controler"
-![alt text](image-23.png)
+   Sie sehen nun die Option **"Post Deployment Configuration"**.
+   ![Post Deployment Configuration](image-22.png)
 
-Du wirds dieser menu bekommen, wie der Installtions menu das ist anlich und wrids gelich ablaufen.
-![alt text](image-24.png)
+2. **Wählen Sie "Promote the Server to a Domain Controller"**.
+   ![Promote to Domain Controller](image-23.png)
 
+   Ein Menü wird angezeigt, das dem Installationsmenü ähnelt. Die Konfigurationsschritte verlaufen ähnlich.
+   ![Menü](image-24.png)
 
-3. Drucke auf Add new forest
+### Forest erstellen
+3. **Wählen Sie "Add a new forest"**.
 
-Was ist eine Forest?
-/////////////////
+   #### Was ist ein Forest?
+   Ein "Forest" ist die oberste Ebene in der Active Directory-Struktur. Es stellt eine Sammlung von Domänen dar, die eine gemeinsame Konfiguration, Schema und Sicherheitsgrenzen teilen.
 
-gebe Deine Domain eine Domain name. Das wird spatter von der DNS verwalten.
-Der AD Modul benotigt eine FQDN, und wrid keine einfache name in der domain name.
-Du must eine TLD haben, ohne eine TLD wird der Server der name Ncith akzeptiren. 
+4. **Geben Sie Ihrer Domain einen Namen**.
+   ![Domain Name](image-25.png)
 
-4. Schreibe deine Domain Name rein
-![alt text](image-25.png)
+   - Der AD-DS-Dienst benötigt einen vollständig qualifizierten Domänennamen (FQDN). 
+   - Einfachere Namen wie "domain.local" oder "example.com" sollten eine Top-Level-Domain (TLD) enthalten. Ohne eine TLD akzeptiert der Server den Namen nicht.
 
-wenn sie verscheiden servern und forst haben auf eine server es kann dazu fuhren das die auf verschidene Infrascrucutre funkzioneiren. Deswegen ist es jetz nicht so wichtig in unsere fall aber sie nacher auf eine andere infracscurete eine Forest erstellen wollen. Mussen sie enschprechend wissen weche aus zuwahlen
+   ⚠️ Wenn mehrere Server und Forests in einer Infrastruktur existieren, achten Sie darauf, die richtige Konfiguration zu wählen.
 
-5. Wahle die Windwos Server 2025
-![alt text](image-26.png)
+5. **Wählen Sie die Windows Server-Version**:
+   ![Windows Server-Version](image-26.png)
 
-Welche funkzionen soll diesr dns server haben. Du hast die auswahl das zu bestimmen.
+   Hier legen Sie die Funktionsebenen für die Domäne fest. Dies beeinflusst die verfügbaren Funktionen und Kompatibilität.
 
-6. Wahle DNS
-![alt text](image-27.png)
+6. **Wählen Sie DNS aus**.
+   ![DNS auswählen](image-27.png)
 
-Dieses password musen sie merken wegen es wird wichtig spatter, wenn wir die clients einloggen und mir Der AD verbinden.
+   - Der DNS-Server ist notwendig, um Namensauflösungen für Active Directory bereitzustellen.
 
-7. Schreibe eine Passoword rein, Und Drucke Weiter
+7. **Erstellen Sie ein sicheres Passwort** und merken Sie es sich. Dieses Passwort wird später benötigt, z. B. beim Hinzufügen von Clients zur Domäne.
+   ![Passwort festlegen](image-28.png)
 
-![alt text](image-28.png)
+   - **Hinweis:** In dieser Konfiguration ist keine DNS-Delegationszone erforderlich, da wir ein einfaches AD- und DNS-Setup erstellen.
 
-Wir Brauchen keine DNS delegation zone, Wegen das wird eine simplen AD + DNS Setup.
+8. **Klicken Sie auf Weiter**.
+   ![Weiter klicken](image-29.png)
 
-8. Drucke Weiter
+   - **NetBIOS-Name:** Geben Sie den NetBIOS-Namen ein, den Endbenutzer sehen werden, wenn sie mit der Domäne verbunden sind.
+   ![NetBIOS-Name festlegen](image-30.png)
 
-![alt text](image-29.png)
+9. **Standardpfade verwenden oder anpassen**:
+   ![Pfadoptionen](image-31.png)
 
-Das Netbios ist das name was die Cleint Gareten werden sehen wenn die mit der AD verbunden sind, das ist die name von der server das wird zu das end user sehebar
+   - Hier können Sie die Speicherpfade für die Datenbanken und Logs ändern. Standardmäßig wird alles auf der Hauptfestplatte gespeichert.
 
-9. Schribe die Name rein, Durkce weiter
+10. **Überprüfen Sie die Einstellungen**:
+   ![Einstellungen überprüfen](image-32.png)  
+   ![Einstellungen überprüfen](image-33.png)
 
-![alt text](image-30.png)
+   - Es wird dringend empfohlen, die Konfiguration vor der Installation zu überprüfen. Nutzen Sie die Screenshots als Beispiel.
 
-Hier kannst du die Phaden zu das data an der server andren. Das ist wichtig wenn du willst das die data auf eine andre disk oder dirve geschpeichertwerden soll. Wir nutzen die Default wengen wir haben nur eine dirive.
+11. **Klicken Sie auf Weiter**.
 
-10. Drucke weiter
+   - Windows Server 2025 wird die Einstellungen überprüfen und die Installation vorbereiten. Falls Warnungen erscheinen, sind diese in vielen Fällen unkritisch (z. B. aufgrund von Netzwerkanpassungen in virtuellen Maschinen).
 
-![alt text](image-31.png)
+   ![Warnungen überprüfen](image-34.png)
 
+   ⚠️ In unserem Beispiel sind Netzwerkwarnungen auf die Verwendung einer VM zurückzuführen. Diese können ignoriert werden, da sie in einer realen Serverumgebung nicht auftreten.
 
-Heir gibts eine revwei, sher epholen die settings an zu schauen bevor du weiter gehst. Nutze meine Screenshots als eine Template.
+12. **Klicken Sie auf Installieren**.
+   ![Installation starten](image-36.png)
 
-![alt text](image-32.png)
+   - Der Server wird die Konfiguration abschließen und sich anschließend automatisch neu starten.
+   ![Installation abgeschlossen](image-37.png)
 
-![alt text](image-33.png)
-
-11. Drucke weiter
-
-Lass Windows server 2025 Die Settigns einstellen und die ubernehmen. Es wird auch shaeun das der Server hat die benotigte resurcen und Modulen dieser weiter zu mahcen.
-
-Es ist nicht eine grosses problem wenn eineige warnunge heir auftacuhen, wir benotigen weinger modulen als die normal auf eine serve sich befinden
-
-![alt text](image-34.png)
-
-Heir in unsere fall tauchen zb einige Probleme mit der Netwrok adapter wengen das eine VM ist. WIr konnen die Ignoriren fur der ziet wegen es wird nicht viel andere sein als waren wir auf einer echten server.
-
-12. Drucke auf Install
-
-![alt text](image-36.png)
-
-![alt text](image-37.png)
-
-Nahc diser Opertaiton wrid der Server selber Neustarten. 
-
-Mit Der erste tiel der instalation von Das Active Directoy sind wir feritg. Wir werden mit der Grupen und Unsern Nacher weiter machen. Aber bvor das bentoige wir einige Modulen.
+### Abschluss
+Nach dieser Operation ist der erste Teil der AD DS-Installation abgeschlossen. Im nächsten Abschnitt werden wir uns mit der Erstellung von Gruppen und Benutzern beschäftigen. Vorher müssen jedoch einige weitere Module hinzugefügt werden.
 
 # DNS
 Siro is doing this
@@ -207,62 +197,83 @@ Noting here
 
 
 
-## Groups and Users AD
+## Groups and Users in Active Directory
 
-### Infos / Theorie
+### Theorie und Hintergrund
 
-Wir haben die DNS Und Das DCP konfiguriert, jetz so das unsere AD Mit Unser Gefuhlt werden kann schauen wir uns an wie mann Unser und Organistaion Units machet in AD.
+Nachdem wir DNS und den Domain Controller (DCP) konfiguriert haben, können wir nun Active Directory mit Benutzern und Organisationseinheiten (Organizational Units, OUs) befüllen.
 
-*Grund Begreife* 
+#### Grundbegriffe:
 
-Organistoan Untis sind wie abtielungen, die sind da um usern Directorys und sontstiges zu behalten. Mann kann meherere usern und Directorys uber eine organistational unti verwalten. 
+1. **Organizational Units (OUs):**
+   - OUs sind wie Abteilungen innerhalb eines Unternehmens.
+   - Sie dienen dazu, Benutzer, Verzeichnisse und andere Ressourcen strukturiert zu verwalten.
+   - Mit OUs kann man Benutzer und Verzeichnisse zentral organisieren und effizient verwalten.
 
-Usern an der AD, Usern sind die Besntand teil der AD wir konenn die nutzetn um leute in der AD zu verbinden und zusamnen zu bringen. Die konnen eine veilatligkeit an Moglichkeiten zur verwaltung haben wie: Cloud Hoems, Cloud Storange, VMs um ins netz zu arbeiten und auch configuraitosn so das auf jeder comptuer konenn die gelich und einfahc arbeitenn.
+2. **Benutzer in Active Directory:**
+   - Benutzer sind wesentliche Bestandteile von AD. Sie ermöglichen es, Personen mit der Domäne zu verbinden und gemeinsame Ressourcen zu nutzen.
+   - Benutzer können auf vielfältige Weise verwaltet werden, z. B.:
+     - Zugriff auf Cloud-Storage.
+     - Nutzung von VMs.
+     - Einheitliche Konfigurationen auf verschiedenen Computern.
 
-Folder, an der AD konenn wir foldern erstellen wo wir data und Inforamtionenn reinmachen konnen, die nutuzen uns wie File Shares aber afu eine bessere nuvea
+3. **Verzeichnisse und Ordner:**
+   - In AD können Verzeichnisse erstellt werden, um Daten und Informationen zu speichern.
+   - Diese Verzeichnisse ähneln File Shares, bieten jedoch eine bessere Integration und Verwaltungsmöglichkeiten.
 
-----
+---
 
-### Organistaion Units
+### Organizational Units (OUs) erstellen
 
-1. Von der Server Maneger In der Obberen Ecke Drucke auf "Active Directoy User and Servicecs"
-![alt text](image-38.png)
-![alt text](image-39.png)
+1. **Öffnen Sie die Active Directory Users and Computers-Konsole:**
+   - Navigieren Sie im **Server Manager** in die obere rechte Ecke und klicken Sie auf **"Active Directory Users and Computers"**.
+   ![Active Directory öffnen](image-38.png)
+   ![Active Directory Users and Computers](image-39.png)
 
-an der linken seite befindent sich die active domains in diene Network
-![alt text](image-40.png)
+   - Auf der linken Seite finden Sie die Domänen in Ihrem Netzwerk.
+   ![Domänen anzeigen](image-40.png)
 
-Heir ist das Domain kemal.com die wir vorher gemacht haben.
+     In diesem Beispiel verwenden wir die zuvor erstellte Domäne **kemal.com**.
 
-2. Drucke auf Der Main Domain
-![alt text](image-41.png)
+2. **Öffnen Sie die Hauptdomäne:**
+   - Klicken Sie auf die Hauptdomäne, um alle untergeordneten Verzeichnisse anzuzeigen.
+   ![Hauptdomäne öffnen](image-41.png)
 
-Heir befinden sich die utnere Direcotrs fur das AD. Heir findete man Alle Directos in eine spezifische Domain. Du kannst alle anderungne was auf netz geht.
+     - Hier sehen Sie alle Verzeichnisse und Ressourcen, die zu dieser Domäne gehören.
 
-3. Rechte Maus taste drucke auf das Domain
-![alt text](image-42.png)
+3. **Neue Organizational Unit erstellen:**
+   - Klicken Sie mit der rechten Maustaste auf die Hauptdomäne.
+   ![Rechte Maustaste auf Domäne](image-42.png)
 
-4. Drucke auf new
-5. Wahle Organistaon Unti 
-![alt text](image-43.png)
-![alt text](image-44.png)
+   - Wählen Sie **"New"** > **"Organizational Unit"**.
+   ![Neue OU erstellen](image-43.png)
+   ![OU-Option auswählen](image-44.png)
 
-Heir kannst du selber auswahlen was fur eine Namesn kozept deinser organistoan Untis. Es kann sein das sie wollen fur jede Ablteilung eine Organsitoan Unit machen. Order ware das auf eine sub domain. dass kommt auf der Planung drauf.
+4. **Name der OU festlegen:**
+   - Geben Sie einen passenden Namen für die OU ein. 
+   - Sie können z. B. für jede Abteilung eine eigene OU erstellen oder die Struktur nach einer Subdomäne gliedern, je nach Ihren Anforderungen.
+   ![OU benennen](image-45.png)
 
-6. Schreibe die name von deinser Unti. Und Drucke auf Ok
-![alt text](image-45.png)
+5. **Erstellen der OU bestätigen:**
+   - Nach dem Bestätigen wird die OU erstellt und im Verzeichnis angezeigt.
+   ![OU erstellt](image-46.png)
 
-Jetz ist eine Organistton unti kreiert. 
+6. **Unter-OUs erstellen:**
+   - Sie können innerhalb einer OU weitere OUs erstellen, um komplexere Strukturen abzubilden.
+   - Beispiel: Erstellen Sie für verschiedene Abteilungen wie IT, HR und Finance separate Unter-OUs.
+   ![Unter-OUs Beispiel](image-47.png)
 
-![alt text](image-46.png)
+---
 
-Was eine sher colle moglichkeit ist das wir unter diesr unti noch einige organisaotl untis machen konnen
+### Benutzer erstellen
 
-Zb in meiner situation wo wir einige abteilungen haben werde ich die abteilungne in verschidenen organistoaon untis uterteilen so das die seperat von ein andere fukzioniren konenn.
+Nach dem Erstellen der OUs können wir Benutzer hinzufügen. Benutzer in AD sind vergleichbar mit lokalen Benutzern auf einem PC, werden jedoch zentral auf dem Server gespeichert und verwaltet. Dies bietet zahlreiche Vorteile wie:
 
-![alt text](image-47.png)
+- Zentrale Verwaltung von Zugriffsrechten.
+- Einheitliche Konfigurationen für Benutzergeräte.
+- Vereinfachte Integration in das Unternehmensnetzwerk.
 
-Wenn wir die Organsination untis gemahct haben, gehen wir fort mit der user kreation. Users sind Gleich wie die Local users auf PC aber in disenm fall wird das auf das server geshpeichert. Die sind auf das server geschpecihet und es gibt uns sehr viele verwalungs methoden
+Der nächste Schritt ist die Erstellung von Benutzern, um die Domäne weiter zu organisieren und zu verwalten.
 
 ### Normale User
 
