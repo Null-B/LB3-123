@@ -359,21 +359,43 @@ Wir mussen auf die Vms 3 sachen machen:
 In der Network manager der VM, mussen sie sicher stellen das es in der gelichen Netzwerk ist wie das Server. Wenn das nicht der fall ware gehen sie zu der VM Network konfiguration in diser dokumet. Da wirds ausfuhrlich beschreiben wie mann das macht.
 
 1. Starte die Cleint VM
-
 2. Logge dich rein mit der Local User
 3. Ofnnen sie der File Explorer
+![alt text](image-61.png)
 4. Gehe auf This PC
+![alt text](image-62.png)
 5. Drucke in das Feld mit der Rechten Maus taste
+![alt text](image-63.png)
 6. Gehe auf Properties
+![alt text](image-64.png)
 7. Drucke auf das "Rename this PC"
+![alt text](image-65.png)
+
 8. Schreiben sie der Name des PC die wir nacher in das AD sehen werden
+
+![alt text](image-66.png)
+
+10. Neu starten
 
 unter dieser menu stehet "member of" Da hats 2 optioen:
 * Domain
 * Workgroup
 
-9. Wahle die Domain (Deisem fall"kemal.com")
-10. Neu starten
+9. Ofnnen sie der File Explorer
+![alt text](image-61.png)
+10. Gehe auf This PC
+![alt text](image-62.png)
+11. Drucke in das Feld mit der Rechten Maus taste
+![alt text](image-63.png)
+12. Gehe auf Properties
+13. Schrolle Runter Bis "change Domain or Workgroup"
+![alt text](image-67.png)
+14. Drucke Auf Change
+![alt text](image-68.png)
+15. Drucke Auf Domain
+![alt text](image-69.png)
+16. Schreibe die Domain rein (Deisem fall"kemal.com")
+
 
 Nach der Neu start
 11. Wahlen sie unten rehcts "Other User"
