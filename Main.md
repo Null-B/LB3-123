@@ -346,76 +346,137 @@ Die Konfiguration auf dem Server ist nun abgeschlossen. Mit dem Admin-Benutzer k
 
 Um Clients mit dem Netzwerk zu verbinden, müssen einige Einstellungen auf den Client-Systemen vorgenommen werden. Diese Schritte werden im nächsten Abschnitt erklärt.
 
-## Cleitn Tests
+## Client Tests
 
-Wir Brauchen Eine zusatliche VM, Das sollte entweder Windows 10 oder windwos 11 sein.
+Wir benötigen eine zusätzliche VM. Diese sollte entweder Windows 10 oder Windows 11 sein.
 
-Wir mussen auf die Vms 3 sachen machen:
-* PC name anderen
-* Domain hinzufugen
-* Testen
+### Aufgaben auf der VM:
+1. PC-Namen ändern
+2. Domain hinzufügen
+3. Testen
 
-**wichtig**
-In der Network manager der VM, mussen sie sicher stellen das es in der gelichen Netzwerk ist wie das Server. Wenn das nicht der fall ware gehen sie zu der VM Network konfiguration in diser dokumet. Da wirds ausfuhrlich beschreiben wie mann das macht.
+**Wichtig:**  
+Im Network Manager der VM müssen Sie sicherstellen, dass sich die VM im gleichen Netzwerk wie der Server befindet.  
+Falls das nicht der Fall ist, folgen Sie den Anweisungen in der Dokumentation zur VM-Netzwerkkonfiguration. Dort wird ausführlich beschrieben, wie Sie das Netzwerk korrekt einstellen.
 
-1. Starte die Cleint VM
-2. Logge dich rein mit der Local User
-3. Ofnnen sie der File Explorer
-![alt text](image-61.png)
-4. Gehe auf This PC
-![alt text](image-62.png)
-5. Drucke in das Feld mit der Rechten Maus taste
-![alt text](image-63.png)
-6. Gehe auf Properties
-![alt text](image-64.png)
-7. Drucke auf das "Rename this PC"
-![alt text](image-65.png)
+### Schritte zur Konfiguration:
+1. Starten Sie die Client-VM.
+2. Melden Sie sich mit dem lokalen Benutzerkonto an.
+3. Öffnen Sie den File Explorer.  
+   ![File Explorer öffnen](image-61.png)
+4. Navigieren Sie zu "This PC".  
+   ![This PC auswählen](image-62.png)
+5. Klicken Sie mit der rechten Maustaste auf das Feld.  
+   ![Rechtsklick auf das Feld](image-63.png)
+6. Wählen Sie "Properties".  
+   ![Properties öffnen](image-64.png)
+7. Klicken Sie auf "Rename this PC".  
+   ![PC umbenennen](image-65.png)
+8. Geben Sie den neuen Namen des PCs ein, der später im Active Directory sichtbar sein soll.  
+   ![Neuen PC-Namen eingeben](image-66.png)
+9. Starten Sie die VM neu.
 
-8. Schreiben sie der Name des PC die wir nacher in das AD sehen werden
+## Client Tests – Domain hinzufügen und überprüfen
 
-![alt text](image-66.png)
+### Domain-Optionen
+Unter dem Menüpunkt **"Member of"** gibt es zwei Optionen:
+- **Domain**
+- **Workgroup**
 
-10. Neu starten
+### Schritte zur Domain-Konfiguration:
+1. Öffnen Sie den File Explorer.  
+   ![File Explorer öffnen](image-61.png)
+2. Navigieren Sie zu "This PC".  
+   ![This PC auswählen](image-62.png)
+3. Klicken Sie mit der rechten Maustaste auf das Feld.  
+   ![Rechtsklick auf das Feld](image-63.png)
+4. Wählen Sie "Properties".
+5. Scrollen Sie herunter bis **"Change Domain or Workgroup"**.  
+   ![Change Domain oder Workgroup](image-67.png)
+6. Klicken Sie auf **Change**.  
+   ![Change klicken](image-68.png)
+7. Wählen Sie die Option **Domain**.  
+   ![Domain auswählen](image-69.png)
+8. Geben Sie die Domain ein (in diesem Fall **"kemal.com"**).
+9. Starten Sie die VM neu.
 
-unter dieser menu stehet "member of" Da hats 2 optioen:
-* Domain
-* Workgroup
+### Nach dem Neustart:
+1. Wählen Sie unten rechts die Option **"Other User"**.
+2. Überprüfen Sie, ob unter dem Passwort-Feld der Hinweis **"Sign in to: Kemal"** angezeigt wird.  
+   - Wenn dies der Fall ist, bedeutet das, dass Sie sich mit der Domain anmelden und nicht mit dem lokalen Benutzer.
 
-9. Ofnnen sie der File Explorer
-![alt text](image-61.png)
-10. Gehe auf This PC
-![alt text](image-62.png)
-11. Drucke in das Feld mit der Rechten Maus taste
-![alt text](image-63.png)
-12. Gehe auf Properties
-13. Schrolle Runter Bis "change Domain or Workgroup"
-![alt text](image-67.png)
-14. Drucke Auf Change
-![alt text](image-68.png)
-15. Drucke Auf Domain
-![alt text](image-69.png)
-16. Schreibe die Domain rein (Deisem fall"kemal.com")
+3. Geben Sie den Benutzernamen eines Benutzers ein, den wir zuvor erstellt haben.
 
+### Verifizierung:
+1. Öffnen Sie den File Explorer.  
+2. Navigieren Sie zu "This PC".  
+3. Klicken Sie mit der rechten Maustaste auf das Feld.  
+4. Wählen Sie **Properties**.
 
-Nach der Neu start
-11. Wahlen sie unten rehcts "Other User"
-
-Uberprufen sie das es eine weise text unter der passowrd feld gibt was steht "Sign in to: Kemal"
-
-wenn es so stheret bedutet das wir werden mit der Domain eingelogt und Ncith mit der Local user.
-
-12. Geben sie die Username von einer die user die wir fruhner kreiert haben.
-
-13. Ofnnen sie der File Explorer
-14. Gehe auf This PC
-15. Drucke in das Feld mit der Rechten Maus taste
-16. Gehe auf Properties
-
-Unter device specifactions, schauen sie der Full device name an.
-wenn es mit der Domain Endet das bedutet das wir geschaft haben die Cleitns ins netz zu brigen.
-
+- Unter **Device Specifications** überprüfen Sie den **Full Device Name**.
+  - Wenn der Name mit der Domain endet, bedeutet das, dass die Clients erfolgreich in das Netzwerk integriert wurden.
 
 ## Checks
+
+### Netzwerkprüfung:
+1. **IP-Konfiguration prüfen**:  
+   - Öffnen Sie die Eingabeaufforderung (`cmd`) und führen Sie den Befehl `ipconfig` aus.  
+   - Stellen Sie sicher, dass die IP-Adresse, Subnetzmaske und Standard-Gateway korrekt konfiguriert sind und sich im gleichen Netzwerk wie der Server befinden.
+
+2. **Netzwerkverbindung testen**:  
+   - Führen Sie `ping [Server-Hostname]` aus, um zu prüfen, ob die VM den Server erreichen kann.  
+   - Es sollten erfolgreiche Antwortzeiten zurückgegeben werden.
+
+---
+
+### Domain-Integration überprüfen:
+1. **Benutzeranmeldung testen**:  
+   - Melden Sie sich mit einem Domain-Benutzerkonto an.  
+   - Überprüfen Sie unter dem Passwort-Feld, ob **"Sign in to: [Domain-Name]"** angezeigt wird.
+
+2. **Gerät in der Domain sichtbar**:  
+   - Melden Sie sich am Server an und prüfen Sie in den **Active Directory Users and Computers** (ADUC), ob der neue Client in der Liste der Computerobjekte angezeigt wird.
+
+3. **DNS-Einträge prüfen**:  
+   - Stellen Sie sicher, dass die DNS-Einträge des neuen Clients korrekt aufgelöst werden.  
+   - Führen Sie `nslookup [Client-Hostname]` aus, um die DNS-Auflösung zu überprüfen.
+
+---
+
+### Gerätespezifikationen:
+1. **Full Device Name prüfen**:  
+   - Öffnen Sie die Client-Eigenschaften (`Properties`) und prüfen Sie den **Full Device Name**.  
+   - Der Name sollte mit der Domain (z. B. `client.kemal.com`) enden.
+
+2. **Domain-Zugehörigkeit bestätigen**:  
+   - Überprüfen Sie im Menü **System Properties > Computer Name**, dass der Client als **"Member of Domain: [Domain-Name]"** angezeigt wird.
+
+---
+
+### Funktionstests:
+1. **Netzwerkressourcen zugreifen**:  
+   - Testen Sie den Zugriff auf freigegebene Ressourcen wie Netzlaufwerke oder Drucker, die über die Domain verfügbar sind.
+
+2. **Gruppenrichtlinien anwenden**:  
+   - Führen Sie den Befehl `gpresult /r` in der Eingabeaufforderung aus, um sicherzustellen, dass Gruppenrichtlinien angewendet wurden.
+
+3. **Benutzerrechte prüfen**:  
+   - Überprüfen Sie, ob der Benutzer die erwarteten Rechte und Berechtigungen gemäß den Gruppenrichtlinien besitzt.
+
+4. **Testdatei speichern**:  
+   - Erstellen Sie eine Testdatei auf einem Netzlaufwerk oder einer geteilten Ressource, um die Schreib- und Leserechte zu prüfen.
+
+---
+
+### Troubleshooting (falls etwas nicht funktioniert):
+1. **Fehlerprotokolle prüfen**:  
+   - Öffnen Sie die Ereignisanzeige (`Event Viewer`) und prüfen Sie unter **Windows Logs > System** und **Application** auf Fehler oder Warnungen.
+
+2. **Domain-Verbindung testen**:  
+   - Führen Sie `nltest /dsgetdc:[Domain-Name]` aus, um zu überprüfen, ob ein Domain-Controller erreichbar ist.
+
+3. **Netzwerkkonfiguration korrigieren**:  
+   - Falls der Client nicht im gleichen Netzwerk wie der Server ist, passen Sie die Einstellungen im Network Manager an.
 
 
 
